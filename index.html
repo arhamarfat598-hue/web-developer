@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tech Web Developer — Arfat Shaikh</title>
+  <meta name="description" content="Arfat Shaikh — Tech Web Developer. Modern, responsive portfolio. Hire me for premium websites. Single page 2000, Multi page 4000." />
+  <meta name="keywords" content="Tech Web Developer, Arfat Shaikh, web developer, portfolio, hire web developer, single page website price, multi page website price" />
+  <meta name="author" content="Arfat Shaikh" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tech Web Developer — Arfat Shaikh" />
+  <meta property="og:description" content="Modern portfolio and hire form. Single: 2000, Multi: 4000." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="demo1.jpg" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arfat Shaikh",
+    "jobTitle": "Tech Web Developer",
+    "telephone": "+917028425498",
+    "email": "arhamarfat598@gmail.com",
+    "url": "https://yourdomain.com"
+  }
+  </script>
+
+  <style>
+    /* Reset + base */
+    :root{
+      --bg1: linear-gradient(135deg,#30c4ff 0%, #337dec 100%);
+      --card: rgba(10, 249, 82, 0.08);
+      --glass: rgba(223, 40, 40, 0.06);
+      --accent: #d82121;
+      --accent-2: rgba(255,255,255,0.9);
+      --glass-border: rgba(255,255,255,0.12);
+      --shadow: 0 10px 25px rgba(0,0,0,0.18);
+      --radius: 14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.03), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(0,0,0,0.03), transparent),
+                  var(--bg1);
+      color:var(--accent-2);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+      padding-bottom:60px;
+    }
+
+    /* Header / nav */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:22px 36px;
+      position:sticky;
+      top:0;
+      z-index:80;
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.04);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+    }
+    .logo{
+      display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px;
+    }
+    .logo svg{height:40px;width:40px}
+    nav ul{display:flex;gap:18px;list-style:none;align-items:center}
+    nav a{color:var(--accent-2);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{background:var(--glass);border:1px solid var(--glass-border);transform:translateY(-2px);transition:all .18s ease}
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 460px;
+      gap:32px;
+      align-items:center;
+      padding:56px 6vw;
+      min-height:74vh;
+    }
+    .intro h4{opacity:.9;font-weight:600}
+    .intro h1{font-size:54px;margin:12px 0;letter-spacing:-1px}
+    .intro h2{font-weight:600;opacity:.95;margin-bottom:22px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      background:transparent;border:2px solid rgba(255,255,255,0.9);padding:12px 20px;border-radius:10px;font-weight:700;cursor:pointer;
+      transition:transform .22s cubic-bezier(.16,.8,.4,1), box-shadow .18s;
+      backdrop-filter: blur(4px);
+    }
+    .btn.primary{
+      background:rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.25)}
+    .photo{
+      height:420px;width:420px;border-radius:20px;overflow:hidden;background:var(--card);display:flex;align-items:center;justify-content:center;
+      box-shadow:var(--shadow);border:1px solid var(--glass-border);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* cards sections */
+    .section{padding:46px 6vw;margin-top:8px}
+    .card{background:var(--glass);padding:20px;border-radius:12px;border:1px solid var(--glass-border);box-shadow:var(--shadow)}
+    .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+
+    /* Services */
+    .services .item{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.04)}
+    .services h3{margin-bottom:10px}
+
+    /* Experience */
+    .experience{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .exp-years{font-size:44px;font-weight:800}
+    .exp-proof{max-width:320px;border-radius:10px;overflow:hidden}
+    .exp-proof img{width:100%;height:100%;object-fit:cover}
+
+    /* Price */
+    .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+    .price{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.08), transparent);text-align:center;border:1px solid rgba(255,255,255,0.04)}
+
+    /* Portfolio modal gallery */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(58, 51, 51, 0.6);display:flex;align-items:center;justify-content:center;z-index:120;opacity:0;pointer-events:none;transition:opacity .18s}
+    .modal-backdrop.show{opacity:1;pointer-events:auto}
+    .modal{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:20px;border-radius:12px;max-width:920px;width:94%;box-shadow:var(--shadow);border:1px solid var(--glass-border)}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .gallery img{width:100%;height:260px;object-fit:cover;border-radius:10px;cursor:pointer;transform:translateY(0);transition:transform .36s cubic-bezier(.2,.9,.3,1)}
+    .gallery img:hover{transform:translateY(-8px) scale(1.02)}
+    .lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:150;opacity:0;pointer-events:none;transition:opacity .24s}
+    .lightbox.show{opacity:1;pointer-events:auto}
+    .lightbox img{max-width:92%;max-height:86%;border-radius:12px;box-shadow:0 40px 80px rgba(0,0,0,0.5);animation:pop .36s ease both}
+    @keyframes pop{ from{transform:scale(.86) translateY(20px);filter:blur(6px)} to{transform:scale(1) translateY(0);filter:blur(0)} }
+
+    /* form */
+    form label{display:block;font-weight:600;margin:10px 0 6px}
+    input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--accent-2)}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{font-size:13px;opacity:0.9;margin-top:8px}
+
+    /* footer */
+    footer{padding:28px 6vw;text-align:center;opacity:0.9;border-top:1px solid rgba(255,255,255,0.03);margin-top:36px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:28px 5vw; min-height: auto}
+      .photo{width:100%;height:340px}
+      .row{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" aria-hidden="false">
+      <!-- Simple SVG logo -> replace if you want a complex logo image -->
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <rect x="4" y="4" width="56" height="56" rx="10" fill="#ffffff" opacity="0.12"/>
+        <path d="M16 44 L28 20 L36 44 L48 16" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div style="font-size:14px;opacity:0.9">Tech Web Developer</div>
+        <div style="font-size:11px;opacity:0.7">Arfat Shaikh</div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="intro">
+        <h4>I'm</h4>
+        <h1>Arfat Shaikh</h1>
+        <h2>Tech Web Developer</h2>
+        <p style="max-width:70%;opacity:.92">Premium website development focused on performance, SEO and smooth animations. Modern, responsive and conversion oriented designs.</p>
+
+        <div class="cta" style="margin-top:20px">
+          <button class="btn primary" id="hireBtn" aria-haspopup="dialog">Hire Me</button>
+          <button class="btn" id="portfolioBtn">Click to See Portfolio</button>
+        </div>
+
+        <p class="note">Quick: Single page <strong>2000</strong> / Multi page <strong>4000</strong></p>
+      </div>
+
+      <div class="photo" aria-hidden="false">
+        <!-- Replace 'your-photo.jpg' with your actual photo. Keep similar crop/background removed version as requested -->
+        <img src="arfat.png.png" alt="Photo of Arfat Shaikh (replace with your own image)">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="aboutTitle">
+      <div class="card">
+        <h2 id="aboutTitle">About Me</h2>
+        <p style="margin-top:8px">Main expertise in building fast, SEO-friendly websites using modern HTML, CSS & JavaScript. I design and develop responsive websites with smooth animations and conversion focused UX. I love clean code, performance optimization and clear communication.</p>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="btn" style="padding:8px 12px;font-size:13px">React / Next.js</span>
+          <span class="btn" style="padding:8px 12px;font-size:13px">HTML5 / CSS3</span>
+          <span class="btn" style="padding:8px 12px;font-size:13px">Vanilla JS</span>
+          <span class="btn" style="padding:8px 12px;font-size:13px">SEO & Performance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services" aria-labelledby="servicesTitle">
+      <h2 id="servicesTitle">Services</h2>
+      <div class="two" style="margin-top:12px">
+        <div class="item card">
+          <h3>Custom Single-Page Website</h3>
+          <p>Perfect for landing pages, portfolios, and marketing campaigns. Fast, SEO optimized and mobile-first.</p>
+        </div>
+        <div class="item card">
+          <h3>Multi-Page Website</h3>
+          <p>For businesses needing structured pages: home, about, services, blog, contact — with CMS-ready structure.</p>
+        </div>
+        <div class="item card">
+          <h3>Performance & SEO</h3>
+          <p>Core Web Vitals optimization, semantic markup and structured data for better visibility.</p>
+        </div>
+        <div class="item card">
+          <h3>Animations & Interactions</h3>
+          <p>Smooth, lightweight animations — CSS & JS based — that improve perceived quality without slowing down the site.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section" aria-labelledby="experienceTitle">
+      <h2 id="experienceTitle">Experience</h2>
+      <div class="experience" style="margin-top:12px">
+        <div class="card" style="padding:18px;min-width:240px">
+          <div class="exp-years">4+</div>
+          <div style="margin-top:8px;font-weight:700">Years of professional experience</div>
+          <p style="opacity:.9;margin-top:8px">Worked with startups and small businesses to build scalable web experiences with real results.</p>
+        </div>
+
+        <div class="card exp-proof" aria-hidden="false">
+          <!-- Proof / certificate placeholder - replace with your real certificate image -->
+          <img src="proof.png.png" alt="Experience proof / certificate (replace with real proof)">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section id="price" class="section" aria-labelledby="priceTitle">
+      <h2 id="priceTitle">Price</h2>
+      <div class="price-grid">
+        <div class="price card">
+          <h3>Single Page Website</h3>
+          <div style="font-size:28px;font-weight:800;margin-top:8px">₹2,000</div>
+          <p style="opacity:.9;margin-top:8px">Fast landing or portfolio — optimized for SEO and speed.</p>
+        </div>
+        <div class="price card">
+          <h3>Multi Page Website</h3>
+          <div style="font-size:28px;font-weight:800;margin-top:8px">₹4,000</div>
+          <p style="opacity:.9;margin-top:8px">Full site with multiple pages and navigation — CMS ready if needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contactTitle">
+      <h2 id="contactTitle">Contact</h2>
+      <div class="two" style="margin-top:12px;align-items:center">
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p style="margin-top:8px">Phone: <strong>+91 7028425498</strong></p>
+          <p>Email: <strong>arhamarfat598@gmail.com</strong></p>
+          <p style="opacity:.9;margin-top:8px">Available for freelance & full-time projects.</p>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="https://api.whatsapp.com/send?phone=917028425498" target="_blank" rel="noopener">Message on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Quick contact form</h3>
+          <form id="contactFormLite" onsubmit="return sendWhatsAppBrief(event)">
+            <label for="cname">Your name</label>
+            <input id="cname" required placeholder="Your name" />
+            <label for="cmsg">Project idea / message</label>
+            <textarea id="cmsg" required placeholder="Describe your project"></textarea>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="btn primary" type="submit">Send via WhatsApp</button>
+              <button class="btn" type="button" onclick="document.getElementById('contactFormLite').reset()">Clear</button>
+            </div>
+            <p class="note">Form opens WhatsApp with a pre-filled message so you receive it immediately on +91 7028425498</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Tech Web Developer — Arfat Shaikh · <a href="mailto:arhamarfat598@gmail.com" style="color:inherit;text-decoration:underline">arhamarfat598@gmail.com</a>
+  </footer>
+
+  <!-- Portfolio Modal -->
+  <div id="portfolioModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3>Portfolio — Demo Websites</h3>
+        <button onclick="toggleModal(false)" class="btn">Close</button>
+      </div>
+      <p style="opacity:.9;margin-top:6px">Click any demo to view with animation.</p>
+      <div class="gallery" style="margin-top:12px">
+        <img src="demo1.png.png" alt="Demo 1" data-title="Demo 1" />
+        <img src="demo2.png.png" alt="Demo 2" data-title="Demo 2" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox for gallery -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+    <img src="" alt="Expanded demo" id="lightboxImg" />
+  </div>
+
+  <!-- Hire Me Modal -->
+  <div id="hireModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="hireTitle">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="hireTitle">Hire Me — Project Details</h3>
+        <button onclick="toggleHire(false)" class="btn">Close</button>
+      </div>
+
+      <form id="hireForm" onsubmit="return sendWhatsAppFromHire(event)" style="margin-top:12px">
+        <div class="row">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" required placeholder="Your full name" />
+          </div>
+          <div>
+            <label for="phone">WhatsApp phone</label>
+            <input id="phone" required placeholder="+91 98765xxxxxx" />
+          </div>
+        </div>
+
+        <label for="projectType">Project type</label>
+        <select id="projectType">
+          <option value="Single Page Website">Single Page Website (₹2000)</option>
+          <option value="Multi Page Website">Multi Page Website (₹4000)</option>
+          <option value="Custom">Custom</option>
+        </select>
+
+        <label for="budget">Approx. budget (optional)</label>
+        <input id="budget" placeholder="e.g. 2000" />
+
+        <label for="details">Project details</label>
+        <textarea id="details" placeholder="Explain what you need"></textarea>
+
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <button type="submit" class="btn primary">Submit & Send to WhatsApp</button>
+          <button type="button" class="btn" onclick="toggleHire(false)">Cancel</button>
+        </div>
+
+        <p class="note">On submit, WhatsApp will open with all details prefilled so you receive the message immediately at +91 7028425498.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle portfolio modal
+    const portfolioBtn = document.getElementById('portfolioBtn');
+    const portfolioModal = document.getElementById('portfolioModal');
+    portfolioBtn.addEventListener('click', () => toggleModal(true));
+    function toggleModal(show) {
+      if (show) {
+        portfolioModal.classList.add('show');
+        portfolioModal.setAttribute('aria-hidden','false');
+      } else {
+        portfolioModal.classList.remove('show');
+        portfolioModal.setAttribute('aria-hidden','true');
+      }
+    }
+    // lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click', (e) => {
+        const src = e.currentTarget.getAttribute('src');
+        const title = e.currentTarget.dataset.title || '';
+        lightboxImg.src = src;
+        lightboxImg.alt = title;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden','false');
+      });
+    });
+    lightbox.addEventListener('click', ()=> {
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden','true');
+      setTimeout(()=> lightboxImg.src='',240);
+    });
+
+    // Hire modal toggle
+    const hireBtn = document.getElementById('hireBtn');
+    const hireModal = document.getElementById('hireModal');
+    hireBtn.addEventListener('click', ()=> toggleHire(true));
+    function toggleHire(show){
+      if(show){
+        hireModal.classList.add('show');
+        hireModal.setAttribute('aria-hidden','false');
+      } else {
+        hireModal.classList.remove('show');
+        hireModal.setAttribute('aria-hidden','true');
+      }
+    }
+
+    // Send contact quick form via WhatsApp
+    function sendWhatsAppBrief(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const msg = document.getElementById('cmsg').value.trim();
+      if(!name || !msg) return alert('कृपया नाम और संदेश भरें।');
+      const phone = '917028425498'; // +91 7028425498
+      const text = `New client request%0AName: ${encodeURIComponent(name)}%0AMessage: ${encodeURIComponent(msg)}%0AFrom: Website`;
+      // Use api.whatsapp.com for web
+      const url = `https://api.whatsapp.com/send?phone=${phone}&text=${text}`;
+      window.open(url,'_blank');
+      // optional: clear form
+      document.getElementById('contactFormLite').reset();
+      return false;
+    }
+
+    // Send from hire modal — collect fields and open WhatsApp with details
+    function sendWhatsAppFromHire(e){
+      e.preventDefault();
+      const fullName = document.getElementById('name').value.trim();
+      const clientPhone = document.getElementById('phone').value.trim();
+      const projectType = document.getElementById('projectType').value;
+      const budget = document.getElementById('budget').value.trim();
+      const details = document.getElementById('details').value.trim();
+      if(!fullName || !clientPhone || !details) {
+        alert('कृपया नाम, फोन और प्रोजेक्ट डिटेल्स भरें।');
+        return false;
+      }
+      const to = '917028425498';
+      let message = `New Hire Request%0AName: ${encodeURIComponent(fullName)}%0AClient Phone: ${encodeURIComponent(clientPhone)}%0AProject Type: ${encodeURIComponent(projectType)}%0ABudget: ${encodeURIComponent(budget)}%0ADetails: ${encodeURIComponent(details)}%0AFrom: Tech Web Developer site`;
+      // open whatsapp
+      const url = `https://api.whatsapp.com/send?phone=${to}&text=${message}`;
+      window.open(url,'_blank');
+      toggleHire(false);
+      document.getElementById('hireForm').reset();
+      return false;
+    }
+
+    // close modals on ESC
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        toggleModal(false);
+        toggleHire(false);
+        lightbox.classList.remove('show');
+      }
+    });
+
+    // accessibility: close modal if clicking backdrop
+    document.querySelectorAll('.modal-backdrop').forEach(back=>{
+      back.addEventListener('click', (ev)=>{
+        if(ev.target === back){
+          back.classList.remove('show');
+          back.setAttribute('aria-hidden','true');
+        }
+      });
+    });
+
+    // lightweight animated entry for buttons (subtle)
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('mouseenter', ()=> b.animate([{transform:'translateY(0)'},{transform:'translateY(-6px)'}],{duration:220,fill:'forwards'}));
+      b.addEventListener('mouseleave', ()=> b.animate([{transform:'translateY(-6px)'},{transform:'translateY(0)'}],{duration:220,fill:'forwards'}));
+    });
+
+    // Optional: Lazy-load images for performance
+    document.querySelectorAll('img').forEach(img=>{
+      if('loading' in HTMLImageElement.prototype) img.loading = 'lazy';
+    });
+  </script>
+</body>
+</html>
